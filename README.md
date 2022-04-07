@@ -12,9 +12,9 @@ The frontend was made in AngularJS and the Backend in PHP with Codeigniter
 
 ## Screenshots
 
-![screenshots](https://github.com/wildiney/boletim-conectese/blob/master/screenshots/screenshot-02.png?raw=true)
+![screenshots](https://github.com/wildiney/boletim-conecte.se/blob/master/screenshots/screenshot-02.png?raw=true)
 
-![screenshots](https://github.com/wildiney/boletim-conectese/blob/master/screenshots/screenshot-01.png?raw=true)
+![screenshots](https://github.com/wildiney/boletim-conecte.se/blob/master/screenshots/screenshot-01.png?raw=true)
 
 ## Test
 
