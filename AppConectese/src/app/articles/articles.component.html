@@ -1,0 +1,24 @@
+<div class="row" id="articles">
+  <div class="col-md-4">
+    <app-add-articles></app-add-articles>
+  </div>
+  <div class="col-md-8">
+    <div class="row navigation">
+      <div class="col-md-12">
+        <button [ngClass]="(list)?'btn-default':'btn-success'" class="btn btn-default" (click)="view('list')">
+          <i class="fa fa-list"></i>
+        </button>
+        <button [ngClass]="(preview)?'btn-default':'btn-success'" class="btn btn-default" (click)="view('preview')">
+          <i class="fa fa-eye"></i>
+        </button>
+        <button [ngClass]="(code)?'btn-default':'btn-success'" class="btn btn-default" (click)="view('code')">
+          <i class="fa fa-code"></i>
+        </button>
+      </div>
+    </div>
+   <app-list-articles [hidden]="list"></app-list-articles>
+   <app-preview [hidden]="preview"></app-preview>
+   <app-get-articles-code [hidden]="code"></app-get-articles-code>
+  </div>
+
+</div>

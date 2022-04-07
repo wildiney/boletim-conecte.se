@@ -1,0 +1,36 @@
+<h2>LISTAR ARTIGOS</h2>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-stripped table-bordered table-hover table-sm" id="list-articles">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">EDIÇÃO</th>
+                    <th scope="col">MÊS</th>
+                    <th scope="col">IMAGEM</th>
+                    <th scope="col">TÍTULO</th>
+                    <th scope="col">DESCRIÇÃO</th>
+                    <th scope="col" >TIPO</th>
+                    <th scope="col" class="text-center">POSIÇÃO</th>
+                    <!--th scope="col">EDITAR</th-->
+                    <th scope="col" class="text-center">APAGAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list_article of list_articles; let i=index">
+                    <td>{{list_article.edition}}</td>
+                    <td>{{list_article.month}}</td>
+                    <td>
+                        <img [src]="list_article.image" width="50" height="50">
+                    </td>
+                    <td><a href="{{list_article.link}}" target="_blank">{{list_article.title}}</a></td>
+                    <td>{{list_article.description}}</td>
+                    <td>{{list_article.type}}</td>
+                    <!--td class="text-center"><button class="btn btn-danger" (click)="edit(i)"><i class="fa fa-edit" aria-hidden="true"></i></button></td-->
+                    <td class="text-center"><button class="btn btn-primary" (click)="up(i)"><i class="fa fa-arrow-up" aria-hidden="true"></i></button> 
+                    <button class="btn btn-primary" (click)="down(i)"><i class="fa fa-arrow-down" aria-hidden="true"></i></button></td>
+                    <td class="text-center"><button class="btn btn-danger" (click)="remove(i)"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+    <table id="container" cellpadding="0" cellspacing="0" border="0" class="background" style="background: #ccc; border-collapse: collapse; line-height: 100% !important; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%">
+      <tr>
+        <td valign="top" style="border-collapse: collapse">
+
+          <table cellpadding="0" cellspacing="0" border="0" align="center" class="container" style="background: #fff; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px">
+            <tr>
+              <td valign="top" style="border-collapse: collapse">
+                <!-- HEADER -->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" class="header" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt">
+                  <tr>
+                    <td valign="top" style="border: none; border-collapse: collapse; width: 600px">
+                      <img src="https://emailingindra.indra.es/archivos/1/6330_header2.png" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none">
+                    </td>
+                  </tr>
+                </table>
+                <!-- FIM HEADER -->
+                <!-- DATA  -->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" class="data" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 560px">
+                  <tr>
+                    <td valign="top" style="border-collapse: collapse; vertical-align: top">
+                      <p style="color: #98999b; font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 150%; margin: 0; margin-bottom: 10px; padding: 0; text-align: right" contenteditable="true">{{articles[0]?.month | uppercase}} - {{articles[0]?.edition}}ª EDIÇÃO</p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- FIM DATA -->
+                <table cellpadding='0' cellspacing='0' border='0' align='center' style='border-collapse: collapse; height: 15px; mso-table-lspace: 0pt; mso-table-rspace: 0pt '>
+                  <tr>
+                    <td valign='top ' style='border-collapse: collapse '>
+                      <img src='https://emailingindra.indra.es/archivos/1/6324_blank.png' width='560 ' height='15 ' style='-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration:none '>
+                    </td>
+                  </tr>
+                </table>
+
+                <div *ngFor="let article of articles">
+                  <table *ngIf="article.type == 'destaque'" cellpadding="0" cellspacing="0" border="0" align="center" class="header" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt">
+                    <tr>
+                      <td valign="top" style="border: none; border-collapse: collapse; width: 600px">
+                        <a class="txt-rosa" target="_blank" href="{{article.link}}" style="color: #e92076; font-weight: bold; text-decoration: none">
+                          <img src="{{article.image}}" width="600" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; width:600px;">
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                  <table *ngIf="article.type == 'destaque'" cellpadding="" cellspacing="20" border="0" align="center" class="noticia" style="border-bottom: 2px dotted #ccc; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 560px">
+                    <tr>
+                      <td valign="top" style="border-collapse: collapse; padding: 15px;  vertical-align: top">
+                        <h2 style="display:none; color: #e92076; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 130%; margin: 0; margin-bottom: 15px; padding: 0; text-transform: uppercase">
+                          <a class="txt-rosa" target="_blank" href="article.link" style="color: #e92076; font-weight: bold; text-decoration: none">
+                            {{article.title}}
+                          </a>
+                        </h2>
+                        <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 150%; margin: 0; margin-bottom: 10px; padding: 0">{{article.description}}</p>
+                        <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 150%; margin: 0; margin-bottom: 10px; padding: 0">
+                          <a class="txt-rosa" target="_blank" href="{{article.link}}" style="color: #e92076; font-weight: bold; text-decoration: none">
+                            Saiba +
+                          </a>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="border-collapse: collapse; vertical-align: top">
+                        <img src="https://emailingindra.indra.es/archivos/1/6324_blank.png" width="560" height="1" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <table cellpadding='0 ' cellspacing='0 ' border='0 ' align='center' style='border-collapse: collapse; height: 30px; mso-table-lspace: 0pt; mso-table-rspace: 0pt'>
+                  <tr>
+                    <td valign='top' style='border-collapse: collapse'>
+                      <img src='https://emailingindra.indra.es/archivos/1/6324_blank.png' width='560' height='30' style='-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none'>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- INICIO CONTEUDO -->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" id="sumario" class="content" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 560px">
+                  <tr>
+                    <td valign="top" style="border-collapse: collapse; vertical-align: top">
+                      <!-- LOOP DE NOTÍCIAS -->
+                      <div *ngFor="let article of articles; let i=index">
+                        <table *ngIf="article.type == 'noticia'" cellpadding="" cellspacing="20" border="0" align="center" class="noticia" style="border-bottom: 2px dotted #ccc; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 560px">
+                          <tr>
+                            <td width="180" valign="top" style="border-collapse: collapse; vertical-align: top; width: 180px" class="thumbnail">
+                              <img width="150" [src]="article.image" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none; width: 150px;">
+                            </td>
+                            <td valign="top" style="border-collapse: collapse; vertical-align: top">
+                              <h2 style="color: #e92076; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 130%; margin: 0; margin-bottom: 15px; padding: 0; text-transform: uppercase">
+                                <a class="txt-rosa" target="_blank" href="{{article.link}}" style="color: #e92076; font-weight: bold; text-decoration: none"  contenteditable="true">
+                                  {{article.title}}
+                                </a>
+                              </h2>
+                              <p style="white-space:pre-line;font-family: Arial, sans-serif; font-size: 12px; line-height: 150%; margin: 0; margin-bottom: 10px; padding: 0"  contenteditable="true">{{article.description}}</p>
+                              <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 150%; margin: 0; margin-bottom: 10px; padding: 0">
+                                <a class="txt-rosa" target="_blank" href="{{article.link}}" style="color: #e92076; font-weight: bold; text-decoration: none">
+                                  Saiba +
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="border-collapse: collapse; vertical-align: top">
+                              <img src="https://emailingindra.indra.es/archivos/1/6324_blank.png" width="180" height="30" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none">
+                            </td>
+                            <td style="border-collapse: collapse; vertical-align: top">
+                              <img src="https://emailingindra.indra.es/archivos/1/6324_blank.png" width="380" height="30" style="-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration: none">
+                            </td>
+                          </tr>
+                        </table>
+                        <table cellpadding='0' cellspacing='0' border='0' align='center' style='border-collapse: collapse; height: 30px; mso-table-lspace:0pt; mso-table-rspace: 0pt '>
+                          <tr>
+                            <td valign='top ' style='border-collapse: collapse '>
+                              <img src='https://emailingindra.indra.es/archivos/1/6324_blank.png' width='560 ' height='30 ' style='-ms-interpolation-mode: bicubic; display: block; outline: none; text-decoration:none '>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <table cellpadding="0" cellspacing="0" border="0" align="center" class="footer" style="border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 600px">
+                        <tr>
+                          <td class="rosa" valign="top" style="background-color: #63656a; border-collapse: collapse; color: #fff; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; margin: 0; padding: 0; text-align: center; vertical-align: middle">
+                            <p style="font-family: Arial, sans-serif; font-size: 12px; line-height: 150%; margin: 0; margin-bottom: :0; padding: 0">{{ today | date: 'yyyy'}} -
+                              <a href="http://www.indracompany.com" style="color: white; font-weight: bold; text-decoration: none">indracompany.com</a>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
