@@ -30,7 +30,7 @@ class login_model extends CI_model {
                 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8 COLLATE=utf8_general_ci;";
             if (!$this->db->query($query)) {
                 die('Erro ao criar tabela');
-            } else {
+            } else {	
 				$this->db->query("INSERT INTO indra_boletim_usuarios (nome, email, senha, created_at) VALUES ('admin', 'admin@admin.com','admin', NOW())");
 			}
         }

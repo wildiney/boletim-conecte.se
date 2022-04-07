@@ -44,3 +44,8 @@
 # System Files
 .DS_Store
 Thumbs.db
+
+
+/api/ci_sessions
+/api/application/config/development
+/api/application/config/production
