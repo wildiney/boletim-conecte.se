@@ -34,3 +34,11 @@ services:
     image: mysql:5.7
     env_file:
       - ./env/mysql.env
+  composer:
+    build:
+      context: .
+      dockerfile: dockerfiles/composer/Dockerfile
+    volumes:
+      - ./api:/var/www/html
+    depends_on:
+      - php
