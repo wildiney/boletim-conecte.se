@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'neosans-medium';
+    src: url('fonts/NeoSans-Medium.eot');
+    src: local('☺'), url('fonts/NeoSans-Medium.woff') format('woff'), url('fonts/NeoSans-Medium.ttf') format('truetype'), url('fonts/NeoSans-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: rgb(230,230,230);
+    padding-top: 80px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: rgb(0,172,200);
+    border-color:  rgb(0,172,200);
+}
+
+.btn-group{
+    margin-top:20px;
+}
+.myheader{
+    margin-bottom: 20px;
+}
+.navbar{
+    padding-top: 10px;
+    padding-bottom:10px;
+    padding-right: 18px;
+    border-radius:0;
+}
+.btn-danger{
+    color:white !important;
+}
+h1{
+    text-indent: -1000px;
+    color: white;
+    font-family: "neosans-medium";
+    position:relative;
+}
+h1 a{
+    display: block;
+    width: 350px;
+    height: 64px;
+    background-image: url('../img/header.png')
+}
+.article-table{
+	font-size: 10px;
+}
+.panel-default > .panel-heading{
+    font-family: "neosans-medium";
+    color: #333;
+    background-color: rgb(0,172,200);
+    border-color: 2px solid rgb(181,190,0);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+.table-destaque th,
+.table-disclaimer th,
+.table-artigos th{
+    overflow: hidden;
+    background-color: dimgray;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.table-destaque th:nth-child(1),
+.table-disclaimer th:nth-child(1),
+.table-artigos th:nth-child(1){
+    width:80px;
+}
+.table-destaque th:nth-child(2),
+.table-disclaimer th:nth-child(2),
+.table-artigos th:nth-child(2){
+    width:120px;
+}
+.table-destaque th:nth-child(3),
+.table-disclaimer th:nth-child(3),
+.table-artigos th:nth-child(3){
+    width:200px;
+}
+.table-destaque th:nth-child(4),
+.table-disclaimer th:nth-child(4),
+.table-artigos th:nth-child(4){
+    width:140px;
+}
+.table-destaque th:nth-child(6),
+.table-disclaimer th:nth-child(6),
+.table-artigos th:nth-child(6){
+    width:70px;
+}
+#login-container{
+    position:relative;
+    width: 300px;
+    margin: 80px auto;
+    padding:40px;
+    border:1px solid #ccc;
+    text-align: center;
+    border-radius: 10px;
+    background:#f4f4f4;
+}
+#form-login input{
+    height: 40px;
+    padding: 10px;
+    transition:0.2s ease-in-out;
+}
+#form-login input:focus{
+    outline:0;
+    background:#eee;
+}
+#form-login input[type="text"]{
+    border-radius: 5px 5px 0 0;
+    text-transform: lowercase;
+}
+#form-login input[type="password"]{
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+}
+#form-recover button,
+#form-login button{
+    margin-top:15px;
+}
+#login-container .error{
+    padding:10px 10px 0px 10px;
+    line-height: 20px;
+    color:red;
+    font-family:verdana;
+    font-size: 0.7em;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin:20px 0;
+}
+#login-container .recover{
+    font-size: .7em;
+    margin:20px 0px 0px;
+}
