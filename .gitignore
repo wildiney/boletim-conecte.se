@@ -1,0 +1,46 @@
+*.env
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/AppConectese/dist
+/AppConectese/dist-server
+/AppConectese/tmp
+/AppConectese/out-tsc
+
+# dependencies
+/AppConectese/node_modules
+
+# IDEs and editors
+/AppConectese/.idea
+/AppConectese/.project
+/AppConectese/.classpath
+/AppConectese/.c9/
+/AppConectese/*.launch
+/AppConectese/.settings/
+/AppConectese/*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/AppConectese/.sass-cache
+/AppConectese/connect.lock
+/AppConectese/coverage
+/AppConectese/libpeerconnection.log
+/AppConectese/npm-debug.log
+/AppConectese/testem.log
+/AppConectese/typings
+
+# e2e
+/AppConectese/e2e/*.js
+/AppConectese/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
